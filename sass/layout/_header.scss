@@ -5,11 +5,11 @@
   height: u.rem(538);
   background-image: url(../images/mobile/image-header.jpg);
   background-size: 100%;
+  background-position: center;
   background-repeat: no-repeat;
   padding: u.rem(32) u.rem(24);
 
   @include u.breakpoint(large) {
-    min-height: 100vh;
     background-image: url(../images/desktop/image-header.jpg);
   }
 
