@@ -1,0 +1,170 @@
+@use "../util" as u;
+
+//HEADER TYPOGRAPHY
+.header__nav-list li a {
+  font-family: u.$fontBarlow;
+  font-size: u.rem(20);
+  color: var(--darkGrayishBlue);
+  text-decoration: none;
+
+  @include u.breakpoint(large) {
+    font-size: u.rem(18);
+    letter-spacing: u.rem(-0.13);
+    color: var(--white);
+  }
+}
+
+.contact-btn {
+  font-family: u.$fontFraunces;
+  font-size: u.rem(15);
+  text-transform: uppercase;
+  letter-spacing: u.rem(0.11);
+  color: var(--veryDarkDesaturatedBlue);
+
+  &:hover {
+    color: var(--white);
+  }
+}
+
+.header__title {
+  font-family: u.$fontFraunces;
+  font-size: clamp(u.rem(40), 5vw, u.rem(56));
+  text-transform: uppercase;
+  letter-spacing: u.rem(6.25);
+  line-height: 1;
+  color: var(--white);
+  text-align: center;
+  margin-top: u.rem(88);
+}
+
+// MAIN TYPOGRAPHY
+
+.transform__info-title,
+.stand-out__info-title {
+  font-family: u.$fontFraunces;
+  font-size: clamp(u.rem(32), 5vw, u.rem(40));
+  font-weight: 900;
+  letter-spacing: u.rem(0.23);
+  line-height: 1.2;
+  text-align: center;
+  color: var(--veryDarkDesaturatedBlue);
+
+  @include u.breakpoint(large) {
+    text-align: left;
+  }
+}
+
+.transform__info-paragraph,
+.stand-out__info-paragraph {
+  font-family: u.$fontBarlow;
+  font-size: u.rem(18);
+  letter-spacing: u.rem(-0.13);
+  line-height: u.rem(30);
+  color: var(--darkGrayishBlue);
+  text-align: center;
+
+  @include u.breakpoint(large) {
+    text-align: left;
+  }
+}
+.stand-out__span,
+.transform__span {
+  text-align: center;
+  a {
+    font-family: u.$fontFraunces;
+    font-size: u.rem(15);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: u.rem(1);
+    color: var(--veryDarkDesaturatedBlue);
+    text-decoration: none;
+  }
+
+  @include u.breakpoint(large) {
+    text-align: left;
+  }
+}
+
+.design__info-title {
+  font-family: u.$fontFraunces;
+  font-size: u.rem(28);
+  font-weight: 900;
+  letter-spacing: u.rem(0.23);
+  text-align: center;
+  color: var(--darkDesaturatedCyan);
+}
+
+.pohotography__info-title {
+  font-family: u.$fontFraunces;
+  font-size: u.rem(28);
+  font-weight: 900;
+  letter-spacing: u.rem(0.23);
+  text-align: center;
+  color: var(--darkBlue);
+}
+
+.design__info-paragraph {
+  font-family: u.$fontBarlow;
+  font-size: u.rem(16);
+  letter-spacing: u.rem(-0.11);
+  line-height: u.rem(27);
+  color: var(--darkDesaturatedCyan);
+  text-align: center;
+}
+
+.photography__info-paragraph {
+  font-family: u.$fontBarlow;
+  font-size: u.rem(16);
+  letter-spacing: u.rem(-0.11);
+  line-height: u.rem(27);
+  color: var(--darkBlue);
+  text-align: center;
+}
+
+.testimonial__title {
+  font-family: u.$fontFraunces;
+  font-size: clamp(u.rem(16), 5vw, u.rem(20));
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: u.rem(4);
+  color: var(--grayishBlue);
+  text-align: center;
+}
+.testimonial__p {
+  font-family: u.$fontBarlow;
+  font-size: u.rem(18);
+  letter-spacing: u.rem(-0.13);
+  line-height: u.rem(32);
+  color: var(--veryDarkGrayishBlue);
+  text-align: center;
+}
+
+.profile__info-name {
+  font-family: u.$fontFraunces;
+  font-size: u.rem(18);
+  letter-spacing: u.rem(-0.13);
+  color: var(--veryDarkDesaturatedBlue);
+  text-align: center;
+}
+
+.profile__info-carrier {
+  font-family: u.$fontBarlow;
+  font-size: u.rem(14);
+  letter-spacing: u.rem(-0.1);
+  color: var(--grayishBlue);
+  text-align: center;
+}
+
+// FOOTER TYPOGRAPHY
+.footer-nav__list a {
+  font-family: u.$fontBarlow;
+  font-size: u.rem(18);
+  letter-spacing: u.rem(-0.13);
+  color: var(--footerList);
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: var(--white);
+  }
+}

@@ -1,0 +1,208 @@
+@use "../util" as u;
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .first-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+
+    @include u.breakpoint(large) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, auto);
+    }
+
+    .transform__info,
+    .stand-out__info {
+      padding-top: u.rem(64);
+      padding-right: u.rem(24);
+      padding-bottom: u.rem(64);
+      padding-left: u.rem(24);
+
+      &-paragraph {
+        margin-top: u.rem(24);
+        margin-bottom: u.rem(32);
+      }
+
+      @include u.breakpoint(large) {
+        padding-top: u.rem(158);
+        padding-right: u.rem(137);
+        padding-bottom: u.rem(158);
+        padding-left: u.rem(137);
+
+        &-paragraph {
+          margin-top: u.rem(24);
+          margin-bottom: u.rem(32);
+        }
+      }
+    }
+
+    .transform {
+      height: u.rem(312);
+      background-image: url(../images/mobile/image-transform.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      @include u.breakpoint(large) {
+        height: u.rem(600);
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        background-image: url(../images/desktop/image-transform.jpg);
+      }
+    }
+
+    .stand-out {
+      height: u.rem(312);
+      background-image: url(../images/mobile/image-stand-out.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      @include u.breakpoint(large) {
+        height: u.rem(600);
+        background-image: url(../images/desktop/image-stand-out.jpg);
+      }
+    }
+
+    .design {
+      height: u.rem(600);
+      background-image: url(../images/mobile/image-graphic-design.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+
+      .inline-flex {
+        display: inline-flex;
+        flex-direction: column;
+        gap: u.rem(27);
+        width: 90%;
+        max-width: u.rem(339);
+        margin: 0 auto u.rem(59);
+      }
+
+      @include u.breakpoint(large) {
+        background-image: url(../images/desktop/image-graphic-design.jpg);
+      }
+    }
+
+    .photography {
+      height: u.rem(600);
+      background-image: url(../images/mobile/image-photography.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+
+      .inline-flex {
+        display: inline-flex;
+        flex-direction: column;
+        gap: u.rem(27);
+        width: 90%;
+        max-width: u.rem(339);
+        margin: 0 auto u.rem(59);
+      }
+
+      @include u.breakpoint(large) {
+        background-image: url(../images/desktop/image-photography.jpg);
+      }
+    }
+  }
+
+  .testimonial {
+    width: min(100% - u.rem(48), u.rem(1100));
+
+    @include u.breakpoint(large) {
+      margin-top: u.rem(160);
+      margin-bottom: u.rem(160);
+    }
+
+    .flex-row {
+      display: flex;
+      flex-direction: column;
+      gap: u.rem(64);
+      padding-top: u.rem(64);
+      padding-bottom: u.rem(86);
+
+      @include u.breakpoint(large) {
+        flex-direction: row;
+      }
+    }
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: u.rem(32);
+
+      .profile-pic {
+        width: u.rem(72);
+        height: u.rem(72);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .section3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(2, auto);
+
+    @include u.breakpoint(large) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+    }
+
+    &__img[data-name="milkBottles"] {
+      height: u.rem(188);
+      background-image: url(../images/mobile/image-gallery-milkbottles.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      @include u.breakpoint(large) {
+        height: u.rem(447);
+        background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
+      }
+    }
+
+    &__img[data-name="orange"] {
+      height: u.rem(188);
+      background-image: url(../images/mobile/image-gallery-orange.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      @include u.breakpoint(large) {
+        height: u.rem(447);
+        background-image: url(../images/desktop/image-gallery-orange.jpg);
+      }
+    }
+
+    &__img[data-name="cone"] {
+      height: u.rem(188);
+      background-image: url(../images/mobile/image-gallery-cone.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      @include u.breakpoint(large) {
+        height: u.rem(447);
+        background-image: url(../images/desktop/image-gallery-cone.jpg);
+      }
+    }
+
+    &__img[data-name="sugarCubes"] {
+      height: u.rem(188);
+      background-image: url(../images/mobile/image-gallery-sugar-cubes.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      @include u.breakpoint(large) {
+        height: u.rem(447);
+        background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+      }
+    }
+  }
+}

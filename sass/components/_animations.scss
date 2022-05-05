@@ -1,0 +1,37 @@
+@use "../util" as u;
+
+.header__title {
+  animation: fadeIn ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(u.rem(-30));
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.icon-arrow {
+  animation: arrowFadeIn ease 2s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes arrowFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(u.rem(-50));
+  }
+
+  to {
+    opacity: 1;
+  }
+}

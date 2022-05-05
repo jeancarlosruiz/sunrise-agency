@@ -1,0 +1,21 @@
+@use "../util" as u;
+
+
+.contact-btn {
+  background-color: var(--Yellow);
+  border-radius: u.rem(32);
+  border: none;
+  padding: u.em(15) u.em(32);
+  cursor: pointer;
+  transition: all .2s ease;
+
+  &:hover{
+  background-color: inherit;
+  border: u.rem(1) solid var(--white);
+  
+  }
+
+  @include u.breakpoint(large) {
+    background-color: var(--white);
+  }
+}
